@@ -72,7 +72,7 @@ function App() {
 
   return (
     <div className="mainWrap">
-      {/* <Modal /> */}
+      <Modal />
       <div className="mapContainer">
         <MapContainer
           zoomControl={false}

@@ -1,9 +1,8 @@
 import React from "react";
-import Graph from "../Graph/Graph";
-import Info from "../Info/Info";
-import Table from "../Table/Table";
+import Table from "./Parts/TableSection/Table.jsx";
 import styles from "./Modal.module.css";
-import sprite from "../../assets/sprite.svg";
+import Header from "./Parts/Header/Header";
+import GraphSection from "./Parts/GraphSection/GraphSection";
 
 export default function Modal() {
   return (
