@@ -1,7 +1,10 @@
 .tableWrap{
-    width: 921px;
-    height: 629px;
+    width: 95%;
+    height: 100%;
     background: #F3F3F3;
     border-radius: 15px 12px 12px 15px;
     display: flex;
+    flex: 61;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }

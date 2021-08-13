@@ -23,3 +23,42 @@
     top: 17px;
     left: 15px;
 }
+.mainWrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px 0 0 30px;
+    height: 100vh;
+    width: 73vw;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.circleNameWrap{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex: 9;
+    margin-left: 20px;
+}
+.modalWrap {
+    display: flex;
+    justify-content: center;
+    flex: 27;
+    width: 100%;
+}
+.headerSelector{
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+.headerButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    margin-right: 20px;
+}

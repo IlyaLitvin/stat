@@ -1,0 +1,105 @@
+.tableSelectionWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 2;
+}
+
+.header {
+    display: flex;
+    flex: 15;
+    width: 100%;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.filterButton {
+    background: #C0533A;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 167px;
+    height: 25px;
+}
+
+.fields {
+    display: flex;
+    flex: 7;
+    justify-content: space-around;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #3C3C3C;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 78;
+}
+
+.contentUnit {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.marginLeft {
+    margin-left: 15px;
+}
+
+.marginRight {
+    margin-right: 15px;
+}
+
+.table1 {
+    flex: 6;
+}
+
+.table2 {
+    flex: 8;
+}
+
+.table3 {
+    flex: 11;
+}
+
+.table4 {
+    flex: 8.6;
+}
+
+.table5 {
+    flex: 10.5;
+}
+
+.table6 {
+    flex: 15.8;
+}
+
+.table7 {
+    flex: 12.6;
+}
+
+.table8 {
+    flex: 7.5;
+}
+
+.tableCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

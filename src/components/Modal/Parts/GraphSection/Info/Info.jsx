@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Info.module.css";
+import styles from "../GraphSection.module.css";
 
 const info = [
   { id: 1, name: "Field size", title: "40 ha" },
@@ -11,11 +11,14 @@ const info = [
 export default function Info() {
   return (
     <div className={styles.mainWrap}>
-      <h4 className={styles.title}>Info:</h4>
+      <div className={styles.title}>
+        <span className={styles.titleText}>Info:</span>
+      </div>
+
       {info.map((i, index) => (
-        <div className={styles.infoWrapper} key={index}>
+        <div className={styles.infoWrapper} key={i.id}>
           <p className={styles.name}>{i.name}</p>
-          <p className={styles.title}>{i.title}</p>
+          <p className={styles.value}>{i.title}</p>
         </div>
       ))}
     </div>

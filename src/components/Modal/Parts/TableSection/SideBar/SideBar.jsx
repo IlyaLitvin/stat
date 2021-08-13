@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./SideBar.module.css";
-import columns from "./columns.json";
-import Column from "./Column";
+import columns from "./Column/columns.json";
+import Column from "./Column/Column";
 
 export default function SideBar() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-import styles from "./Graph.module.css";
+import styles from "../GraphSection.module.css";
 
 const date = +new Date(2021, 2, 19);
 const dayMS = 86400000;
@@ -84,7 +84,7 @@ export default function Graph() {
           options={options}
           series={series}
           type="line"
-          height={279}
+          height={window.innerHeight * 0.22}
         />
       </div>
     </div>

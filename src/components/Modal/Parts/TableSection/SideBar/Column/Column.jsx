@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./SideBar.module.css";
-import greenVector from "../../assets/greenVector.svg";
-import yellowVector from "../../assets/yellowWektor.svg";
-import yieldImg from "../../assets/yieldImg.svg";
+import style from "../SideBar.module.css";
+import greenVector from "../../../../../../assets/greenVector.svg";
+import yellowVector from "../../../../../../assets/yellowWektor.svg";
+import yieldImg from "../../../../../../assets/yieldImg.svg";
 
 const Column = ({ column }) => {
   const text = column.rateValue
