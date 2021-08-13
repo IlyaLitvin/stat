@@ -1,0 +1,21 @@
+@import url("~leaflet/dist/leaflet.css");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root,
+.leaflet-container {
+  height: 100vh;
+  width: 100vw;
+}
+.mainWrap {
+  position: relative;
+}
+.mapContainer{
+  position: relative;
+}

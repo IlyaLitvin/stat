@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "PIV13-1",
+    "space": "22.1ha",
+    "yield": "Rosita",
+    "yieldAge": "3 mo.",
+    "rateValue": 13.1
+  },
+  {
+    "id": 2,
+    "name": "PIV13-1",
+    "space": "22.1ha",
+    "yield": "Rosita",
+    "yieldAge": "3 mo.",
+    "rateValue": 13.1
+  },
+  {
+    "id": 3,
+    "name": "PIV13-1",
+    "space": "22.1ha",
+    "yield": "Rosita",
+    "yieldAge": "3 mo.",
+    "rateValue": null
+  },
+  {
+    "id": 4,
+    "name": "PIV13-1",
+    "space": "22.1ha",
+    "yield": "Rosita",
+    "yieldAge": "3 mo.",
+    "rateValue": -4.8
+  }
+]

@@ -1,0 +1,112 @@
+.leftBar{
+    width: 300px;
+    height: 630px;
+    background-color: #F0EAE4;
+    border-radius: 15px 12px 12px 15px;
+}
+.title{
+    width: 300px;
+    height: 54px;
+    border-bottom: 1px solid #C3B9AF;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+.rowNames{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+.fieldRow{
+    margin-left: 35px;
+    flex: 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.yieldRow{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ratedRow{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.columnList{
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yieldBlock{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fieldBlock{
+    margin-left: 10px;
+    flex: 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.rateBlock{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yieldTextWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fieldTextWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rateGreenValue{
+    font-weight: bold;
+    color: #2A980C;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.rateRedValue{
+    font-weight: bold;
+    color: #BF5239;
+}
+.boldText{
+    font-weight: bold;
+    color: #3C3C3C;
+}
+.smallText{
+    color: #3C3C3C;
+}
+.fieldImg{
+    margin-right: 5px;
+}
+.titleTextWrapper{
+    margin-left: 10px;
+}
+.titleField{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    color: #BF5239;
+}
+.titleCluster{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    color: #3C3C3C;
+}

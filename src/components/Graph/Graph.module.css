@@ -1,0 +1,21 @@
+.mainContainer {
+   
+}
+
+.chart {
+   width: 605px;
+   background: #F0EAE4;
+   border-radius: 15px;
+   padding: 1em
+}
+
+.filter {
+   color:#5A575A;
+   font-size: 12px;
+   font-family: Baloo 2;
+   font-style: normal;
+   font-weight: 600;
+   padding-left: 1.3em;
+}
+
+
