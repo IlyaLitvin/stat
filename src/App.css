@@ -19,3 +19,50 @@ body,
 .mapContainer{
   position: relative;
 }
+.leaflet-bar a, .leaflet-control-layers-toggle,
+.leaflet-bar a, .leaflet-bar a:hover {
+  display: inline-block;
+}
+.leaflet-touch .leaflet-bar a:first-child,
+.leaflet-touch .leaflet-bar a:last-child  {
+  border-radius: 0;
+}
+.leaflet-right .leaflet-control {
+  margin-right: 320px;
+  margin-bottom: 10px;
+}
+.leaflet-touch .leaflet-bar a {
+  color: #fff;
+  
+}
+.leaflet-bar a, .leaflet-bar a:hover{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
+  width: 78px;
+  height: 38px;
+  background-color: #000000;
+  opacity: 0.5;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+[data-reach-slider-input][data-orientation="horizontal"] {
+  width: 100px;
+  background-color: #000000;
+  opacity: 0.5;
+  border-radius: 6px;
+  z-index: 9999;
+  position: relative;
+}
+[data-reach-menu-item] {
+  color: red;
+}
+.leaflet-control-attribution a { 
+  display: none;
+}
