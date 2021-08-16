@@ -5,19 +5,18 @@ import iconvlite from "iconv-lite";
 import { TileLayer, ZoomControl, MapContainer } from "react-leaflet";
 import Modal from "./components/Modal/Modal";
 import { LatLngBounds } from "leaflet";
-import { Slider } from "./components/Slider/Slider";
+import Slider from "./components/Slider";
 
 const urlAPI =
   "https://eos.com/landviewer/wms/7f609ae3-ffb8-4fd4-bdbc-7a295800990b?SERVICE=WMS&REQUEST=GetCapabilities";
 
 const initState = new LatLngBounds(
-  [22.17917, 30.52162], //  southWest
-  [24.05272, 32.74153] // northEast
+  [22.505985863772644, 28.943935837246332], //  southWest
+  [23.498237025902313, 29.278971101962256] // northEast
 );
 
 function App() {
   const [coords, setCoords] = useState(initState);
-  const [zoom, setZoom] = useState(13);
   const [coordinatsArr, setCoordinatsArr] = useState([]);
   const [coordsFetch, setCoordsFetch] = useState(false);
 
@@ -72,18 +71,18 @@ function App() {
 
   return (
     <div className="mainWrap">
-      <Modal />
+      {/* <Modal /> */}
       <div className="mapContainer">
         <MapContainer
           zoomControl={false}
           scrollWheelZoom={false}
+          doubleClickZoom={false}
           center={coords.getCenter()}
-          zoom={zoom}
+          zoom={13}
         >
-          <ZoomControl position={"bottomright"} />
           <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" />
+          <Slider />
         </MapContainer>
-        <Slider zoom={zoom} setZoom={setZoom} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Slider.module.css";
 
-export const Slider = ({ zoom, setZoom }) => {
+export const Slider = ({ zoomCustom, setZoom }) => {
   return (
     <div className={styles.slider}>
       <div className={styles.sliderBar}>
@@ -10,7 +10,7 @@ export const Slider = ({ zoom, setZoom }) => {
           type="range"
           min={1}
           max={17}
-          value={zoom}
+          value={zoomCustom}
           onChange={(e) => setZoom(e.target.value)}
         />
       </div>
