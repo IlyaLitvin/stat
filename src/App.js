@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import convert from "xml-js";
 import iconvlite from "iconv-lite";
-import { TileLayer, ZoomControl, MapContainer } from "react-leaflet";
+import { TileLayer, MapContainer } from "react-leaflet";
 import Modal from "./components/Modal/Modal";
 import { LatLngBounds } from "leaflet";
-import Slider from "./components/Slider";
+import Controlls from "./components/Controlls";
+import { CoordinateContext } from "./components/Context/Context";
 
 const urlAPI =
   "https://eos.com/landviewer/wms/7f609ae3-ffb8-4fd4-bdbc-7a295800990b?SERVICE=WMS&REQUEST=GetCapabilities";
@@ -25,7 +26,17 @@ function App() {
     const recursion = (arr, coordinats) => {
       for (let key in arr) {
         if (arr[key].EX_GeographicBoundingBox) {
-          coordinats.push(arr[key].EX_GeographicBoundingBox);
+          const newCoordinats = new LatLngBounds(
+            [
+              arr[key].EX_GeographicBoundingBox.southBoundLatitude._text,
+              arr[key].EX_GeographicBoundingBox.westBoundLongitude._text,
+            ],
+            [
+              arr[key].EX_GeographicBoundingBox.northBoundLatitude._text,
+              arr[key].EX_GeographicBoundingBox.eastBoundLongitude._text,
+            ]
+          );
+          coordinats.push(newCoordinats);
         } else {
           recursion(arr[key].Layer, coordinats);
         }
@@ -55,23 +66,14 @@ function App() {
 
   useEffect(() => {
     if (coordinatsArr.length) {
-      const newCoordinats = new LatLngBounds(
-        [
-          coordinatsArr[1].southBoundLatitude._text,
-          coordinatsArr[1].westBoundLongitude._text,
-        ],
-        [
-          coordinatsArr[1].northBoundLatitude._text,
-          coordinatsArr[1].eastBoundLongitude._text,
-        ]
-      );
-      setCoords(newCoordinats);
+      setCoords(coordinatsArr[0]);
     }
   }, [coordsFetch, coordinatsArr]);
 
   return (
-    <div className="mainWrap">
-      {/* <Modal /> */}
+    <CoordinateContext.Provider value={{coordinatsArr}}>
+      <div className="mainWrap">
+      <Modal />
       <div className="mapContainer">
         <MapContainer
           zoomControl={false}
@@ -81,10 +83,11 @@ function App() {
           zoom={13}
         >
           <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" />
-          <Slider />
+          <Controlls />
         </MapContainer>
       </div>
     </div>
+    </CoordinateContext.Provider>
   );
 }
 
