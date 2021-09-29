@@ -6,6 +6,7 @@ import { TileLayer, ZoomControl, MapContainer } from "react-leaflet";
 import Modal from "./components/Modal/Modal";
 import { LatLngBounds } from "leaflet";
 import Slider from "./components/Slider";
+import Reg from "./components/Reg/Reg.jsx";
 
 const urlAPI =
   "https://eos.com/landviewer/wms/7f609ae3-ffb8-4fd4-bdbc-7a295800990b?SERVICE=WMS&REQUEST=GetCapabilities";
@@ -70,21 +71,22 @@ function App() {
   }, [coordsFetch, coordinatsArr]);
 
   return (
-    <div className="mainWrap">
-      {/* <Modal /> */}
-      <div className="mapContainer">
-        <MapContainer
-          zoomControl={false}
-          scrollWheelZoom={false}
-          doubleClickZoom={false}
-          center={coords.getCenter()}
-          zoom={13}
-        >
-          <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" />
-          <Slider />
-        </MapContainer>
-      </div>
-    </div>
+    // <div className="mainWrap">
+    //   {/* <Modal /> */}
+    //   <div className="mapContainer">
+    //     <MapContainer
+    //       zoomControl={false}
+    //       scrollWheelZoom={false}
+    //       doubleClickZoom={false}
+    //       center={coords.getCenter()}
+    //       zoom={13}
+    //     >
+    //       <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" />
+    //       <Slider />
+    //     </MapContainer>
+    //   </div>
+    // </div>
+    <Reg />
   );
 }
 
