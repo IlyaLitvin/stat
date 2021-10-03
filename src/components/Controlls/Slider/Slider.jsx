@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./Slider.module.css";
+import styles from "../Slider.module.css";
 
 export const Slider = ({ zoomCustom, setZoom }) => {
   return (
-    <div className={styles.slider}>
+    <div className={`${styles.slider} controll`}>
       <div className={styles.sliderBar}>
         <input
           className={styles.activBar}

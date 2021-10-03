@@ -1,13 +1,7 @@
 .slider {
     width: 137px;
     height: 38px;
-    background: #000000;
-    opacity: 0.5;
     border-radius: 6px;
-    position: absolute;
-    right: 140px;
-    bottom: 21px;
-    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,3 +19,11 @@
     height: 100%;
     width: 30%;
 }  */
+.controllsWrapper{
+    z-index: 999;
+    position: absolute;
+    bottom: 21px;
+    right: 42px;
+    display: flex;
+    align-items: flex-end;
+}
