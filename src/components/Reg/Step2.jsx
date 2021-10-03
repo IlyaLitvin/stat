@@ -3,7 +3,6 @@ import { Input } from "./Input";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers";
 import { Button } from "./Button";
 import { useData } from "./DateContext";
 
@@ -19,7 +18,6 @@ export default function Step2() {
   const { reg, handleSubmit, errors } = useForm({
     defaultValues: { email: data.email },
     mode: "onBlur",
-    resolver: yupResolver(schema),
   });
   const history = useHistory();
 

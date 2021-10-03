@@ -7,6 +7,7 @@ import Modal from "./components/Modal/Modal";
 import { LatLngBounds } from "leaflet";
 import Slider from "./components/Slider";
 import Reg from "./components/Reg/Reg.jsx";
+import RegWithForm from "./components/RegWithForm/RegWithForm";
 
 const urlAPI =
   "https://eos.com/landviewer/wms/7f609ae3-ffb8-4fd4-bdbc-7a295800990b?SERVICE=WMS&REQUEST=GetCapabilities";
@@ -86,7 +87,7 @@ function App() {
     //     </MapContainer>
     //   </div>
     // </div>
-    <Reg />
+    <RegWithForm />
   );
 }
 
